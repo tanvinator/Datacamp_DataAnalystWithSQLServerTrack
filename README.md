@@ -5,12 +5,14 @@ Learn how to do effective exploratory data analysis on temporal data, create sca
 This chapter will also cover the following SQL functions: DATEDIFF( ), DATENAME( ), DATEPART( ), CAST( ), CONVERT( ), GETDATE( ), and DATEADD( ).
 ### Dataset:
 Trip Data:
+
   CREATE DATABASE tripdata;
   USE tripdata;
   CREATE TABLE YellowTripData (ID INT, VendorID INT, PickupDate DATETIME2, DropoffDate DATETIME2, PassengerCount INT, TripDistance FLOAT, RateCodeID INT, StoreFwdFlag    CHAR(1), PULocationID INT, DOLocationID INT, PaymentType INT, FareAmount FLOAT, FareExtra FLOAT, MTATax FLOAT, TipAmount FLOAT, TollAmount FLOAT, ImproveSurcharge      FLOAT, TotalAmount FLOAT);
    BULK INSERT YellowTripData FROM '/home/repl/Tripdata_sample-pipe.csv' WITH(FIELDTERMINATOR =',', ROWTERMINATOR = '|');
   
  Bike Share Data:
+  
   CREATE DATABASE BikeShare;
   GO
   USE BikeShare;
